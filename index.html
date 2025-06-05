@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victoria Design - Portfolio Cyberpunk</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particles Canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo" onclick="scrollToSection('inicio')">
+                    Victoria Design
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="desktop-nav">
+                    <button onclick="scrollToSection('inicio')" class="nav-link">Inicio</button>
+                    <button onclick="scrollToSection('galeria')" class="nav-link">Galería</button>
+                    <button onclick="scrollToSection('sobre-mi')" class="nav-link">Sobre Mí</button>
+                    <button onclick="scrollToSection('contacto')" class="nav-link">Contacto</button>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav class="mobile-nav" id="mobile-nav">
+                <button onclick="scrollToSection('inicio')" class="mobile-nav-link">Inicio</button>
+                <button onclick="scrollToSection('galeria')" class="mobile-nav-link">Galería</button>
+                <button onclick="scrollToSection('sobre-mi')" class="mobile-nav-link">Sobre Mí</button>
+                <button onclick="scrollToSection('contacto')" class="mobile-nav-link">Contacto</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <!-- Hero Image -->
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-06-05%20at%204.45.54%20AM-wB4JaM7txua4JUcHb4y35ZCHPfVaNU.jpeg" alt="Victoria Design - Cyberpunk Artist" class="hero-img">
+                        <div class="image-overlay"></div>
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Hero Text -->
+                <div class="hero-text">
+                    <h1 class="hero-title">Conectando mundos...</h1>
+                    <p class="hero-subtitle">Explora lo digital desde el otro lado con Victoria Design</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('galeria')">
+                            Explorar Arte →
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('sobre-mi')">
+                            Sobre Mí
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Sobre el Proyecto</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="about-paragraph">
+                            Bienvenido a mi universo digital, donde cada trazo cuenta una historia y cada color vibra con energía
+                            cyberpunk. Soy una artista que explora los límites entre lo real y lo virtual.
+                        </p>
+                        <p class="about-paragraph">
+                            Mi arte fusiona elementos futuristas con emociones humanas, creando mundos que invitan a la reflexión
+                            y al escape hacia realidades alternativas.
+                        </p>
+                    </div>
+                    <div class="about-visual">
+                        <div class="vision-card">
+                            <div class="vision-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <p class="vision-text">Visión Artística</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Galería Digital</h2>
+            
+            <!-- Artwork Grid -->
+            <div class="artwork-grid" id="artwork-grid">
+                <!-- Artworks will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="contact-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Conecta Conmigo</h2>
+            
+            <div class="contact-grid">
+                <!-- WhatsApp Card -->
+                <div class="whatsapp-card">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="whatsapp-title">Contáctame por WhatsApp</h3>
+                    <p class="whatsapp-text">
+                        Estoy disponible para responder tus preguntas y discutir nuevos proyectos
+                    </p>
+                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                        <i class="fas fa-phone"></i> Enviar Mensaje
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-section">
+                    <h3 class="social-title">Sígueme</h3>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>@victoriadesign</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                            <span>@victoriadesign</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="mailto:hola@victoriadesign.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                            <span>hola@victoriadesign.com</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="collaboration-card">
+                        <h4 class="collaboration-title">¿Colaboración?</h4>
+                        <p class="collaboration-text">
+                            Siempre abierta a nuevos proyectos y colaboraciones creativas. ¡Hablemos sobre tu próxima idea digital!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2024 Victoria Design. Creando futuros digitales.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
